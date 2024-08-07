@@ -146,7 +146,7 @@ export default function Quiz() {
         {answerOptions.map((option, index) => (
           <button 
             key={index}
-            className={`w-full text-white font-bold py-3 px-4 rounded-lg text-left transition-all duration-200
+            className={`flex items-center w-full text-white font-bold py-3 px-4 rounded-lg text-left transition-all duration-200
               ${option.selected && option.correct ? 'bg-green-500 hover:bg-green-700' : ''}
               ${option.selected && !option.correct ? 'bg-red-500 hover:bg-red-700' : ''}
               ${!option.selected ? 'bg-blue-500 hover:bg-blue-700' : ''}
@@ -161,7 +161,10 @@ export default function Quiz() {
             }}
             disabled={answerOptions.some(opt => opt.selected)}
           >
-            <span className="font-semibold mr-2">{option.label}.</span> {option.text}
+            <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border-2 border-white mr-3 mt-1">
+      <span className="font-semibold">{option.label}</span>
+    </div>
+    <span className="flex-grow">{option.text}</span>
           </button>
         ))}
       </div>
