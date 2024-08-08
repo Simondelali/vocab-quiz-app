@@ -91,7 +91,7 @@ export default function Quiz() {
 
   if (isLoading) {
     return (
-        <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 transition-colors duration-200 flex flex-col items-center justify-center`}>
+        <div className={`${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'}  shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 transition-colors duration-200 flex flex-col items-center justify-center`}>
         <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
         <p>Loading quiz...</p>
       </div>
